@@ -59,5 +59,6 @@ object Password:
       Rotation(dir, steps)
     }
 
-Password.one
-Password.two
+println(Password.one)
+println("=================")
+println(Password.two)

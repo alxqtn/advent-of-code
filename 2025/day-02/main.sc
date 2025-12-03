@@ -21,7 +21,6 @@ case class IDRange(start: Long, end: Long):
         possibleDividers
           .filter(str.length() % _ == 0)
           .flatMap { div =>
-            println((str, div))
             val chunks = str.grouped(div).toList
             if chunks.distinct.size == 1 then Some(str.toLong) else None
           }
@@ -48,5 +47,6 @@ object GiftShop:
         IDRange(bounds(0), bounds(1))
       }
 
-GiftShop.one
-GiftShop.two
+println(GiftShop.one)
+println("=================")
+println(GiftShop.two)
